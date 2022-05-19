@@ -1,6 +1,5 @@
 #include "atmega2560.h"
 
-
 void setup(){
     // set PORTB for output
     *DDRB = 0b11110000;
