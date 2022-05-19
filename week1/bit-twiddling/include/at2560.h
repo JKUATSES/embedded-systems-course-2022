@@ -2,18 +2,18 @@
 #define AT2560_H
 
 // port B
-int * PORTB = 0x25;
-int * DDRB = 0x24;
-int * PINB = 0x23;
+#define PORTB (*(volatile unsigned char *) 0x25)
+#define DDRB (*(volatile unsigned char *) 0x24)
+#define PINB (*(volatile unsigned char *) 0x23)
 
 // port C
-int * PORTC = 0x28;
-int * DDRC = 0x27;
-int * PINC = 0x26;
+#define PORTC (*(volatile unsigned char *) 0x28)
+#define DDRC (*(volatile unsigned char *) 0x27)
+#define PINC (*(volatile unsigned char *) 0x26)
 
 // port D
-int * PORTD = 0x2B;
-int * DDRD = 0x2A;
-int * PIND = 0x29;
+#define PORTD (*(volatile unsigned char *) 0x2B)
+#define DDRD (*(volatile unsigned char *) 0x2A)
+#define PIND (*(volatile unsigned char *) 0x29)
 
 #endif
