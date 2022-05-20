@@ -1,0 +1,5 @@
+C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week1/bit-twiddling/cmake-build-debug/CMakeFiles/Production.dir
+C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week1/bit-twiddling/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week1/bit-twiddling/cmake-build-debug/CMakeFiles/Debug.dir
+C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week1/bit-twiddling/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir
+C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week1/bit-twiddling/cmake-build-debug/CMakeFiles/rebuild_cache.dir

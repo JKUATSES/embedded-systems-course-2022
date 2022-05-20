@@ -1,33 +1,29 @@
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "EndlessLoop"
+// vs code + platformio
+// clion  + platformio
+// clion + avr-gcc
+// vscode + avr-gcc
+
 
 #include "at2560.h"
+#define  LED_MASK (1<<5)
+#define  SENSOR_Y_MASK (0x00)
+#define SET_HIGH 0xff
+#define CLEAR 0x00
+
+// 0111 1000
 
 int main(){
-    DDRB = 0xff; // set bit 4-7 as output
+    DDRH = 0xff; // set a bit as output
 
-    while(1){
-        // set pin 4 HIGH - OR
-        // PORTB = PORTB | (1<<7);
+    // clear all bits
+    PORTH &= CLEAR;
 
-        // invert bit 5
-        //PORTB = PORTB ^ (1<<5);
-
-        // clear all bits
-        // PORTB = PORTB & ~(0x00);
-
-        // testing bits
-        // test whether bit 4 is HIGH or LOW
-        // create bit 4 mask
-        unsigned char bit_mask = (1<<4);
-
-        if((PORTB & bit_mask) == 0){
-            // you can do anything...
-            // switch on bit 7
-            PORTB |= (1<<7);
-        }
-
+    // event loop
+    while(true) {
+        // run forever
+        // set upper nibble high
+        PORTH |= SET_HIGH;
     }
+
 }
-#pragma clang diagnostic pop

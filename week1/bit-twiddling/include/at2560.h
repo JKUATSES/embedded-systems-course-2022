@@ -16,4 +16,11 @@
 #define DDRD (*(volatile unsigned char *) 0x2A)
 #define PIND (*(volatile unsigned char *) 0x29)
 
+// port H
+#define PORTH (*(volatile unsigned char *) 0x102)
+#define DDRH (*(volatile unsigned char *) 0x101)
+#define PINH (*(volatile unsigned char *) 0x100)
+
+
+
 #endif
