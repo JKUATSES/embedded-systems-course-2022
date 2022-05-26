@@ -25,7 +25,7 @@ The following factors are very important in serial communication:
 2. Start bit
 3. Stop bit
 
-The image below shows a typical waveform when transmitting serial data:
+The image below shows a typical waveform when transmitting serial data:<br>
 ![Serial Graph](./imgs/serial-oscope.png)
 
 
@@ -41,15 +41,15 @@ USART Communication uses 5 registers to enable serial communication functionalit
 
 The following snapshots show the stated registers.
 
-1. UDRn - USART Data 
-![UDRn](./imgs/UDRn.png)
-2. UCSRnA - USART Control and Status Register A
+1. UDRn - USART Data <br>
+![UDRn](./imgs/UDRn.png) 
+2. UCSRnA - USART Control and Status Register A<br>
 ![ucsra](./imgs/ucsra.png)
-3. UCSRnB - USART Control and Status Register B
+3. UCSRnB - USART Control and Status Register B<br>
 ![ucsrb](./imgs/ucsrb.png)
-4. UCSRnC - USART Control and Status Register C
+4. UCSRnC - USART Control and Status Register C<br>
 ![ucsrc](./imgs/ucsrc.png)
-5. UBRRnL and UBRRnH - USART Baud Rate Registers
+5. UBRRnL and UBRRnH - USART Baud Rate Registers<br>
 ![ubrrl/ubrrh](./imgs/ubbr.png)
 
 For more details on the register, please refer to the datasheet in the resources folder.
