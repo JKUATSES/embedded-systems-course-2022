@@ -7,7 +7,7 @@ For a very basic definition, for computers or ICs to communicate with each other
 
 ### Protocols
 ---
-We’ll limit ourselves to the most common serial mode—universal asynchronous receive and transmit (UART) serial
+We’ll limit ourselves to the most common serial mode—universal asynchronous receive and transmit (UART) 
 <br>
 Consider the case where i need to send the digit 23 to a device. First I convert the decimal to binary   
 ```c
@@ -58,6 +58,48 @@ For more details on the register, please refer to the datasheet in the resources
 ### Register Configuration
 In this section we will show how you can configure the registers to start transmitting with your Atmel AVR microcontroller.
 
+1. First of all, to transmit over serial, you need to initialize the serial registers. First check the set your baud rate using the UBRRH and UBRRL registers.
+
+```c
+UBRR0H = UBRRH_VALUE; /* defined in setbaud.h */
+UBRR0L = UBRRL_VALUE; 
+```
+2. Enable TX and RX using the UCSR0A register. To be specific, use TXEN0 and RXEN0.
+```c
+UCSR0B = (1 << TXEN0) | (1 << RXEN0);
+```
+3. You can optionally check the value of the speed of transmission in register UCSR0A 
+```c
+    #if USE_2X
+    UCSR0A |= (1 << U2X0)
+    #else
+    UCSR0A &= ~(1 << U2X0)
+    #endif
+```
+4. Set the length of your data bit using the UCSRnC register.
+```c
+ UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);   /* 8 data bits, 1 stop bit */
+```
+
+Based on these basic initilization code, the whole function looks as below:
+
+```c
+
+void initUSART(void) { /* requires BAUD */
+  UBRR0H = UBRRH_VALUE; /* defined in setbaud.h */
+  UBRR0L = UBRRL_VALUE;
+  #if USE_2X
+    UCSR0A |= (1 << U2X0); // set U2X0 
+  #else
+    UCSR0A &= ~(1 << U2X0); // clear U2X0
+  #endif
+
+    /* Enable USART transmitter/receiver */
+  UCSR0B = (1 << TXEN0) | (1 << RXEN0);
+  UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);  /* 8 data bits, 1 stop bit */
+}
+
+```
 
 
 ### Transmitting
