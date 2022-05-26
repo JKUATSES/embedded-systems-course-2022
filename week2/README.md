@@ -134,3 +134,21 @@ void receive(void){
 ### Further making
 ---
 You would create header files for the the above functions, namely ***usart.h*** and ***usart.cpp*** and use them in your main files that require USART communication
+
+Other uses of serial communication include:
+1.  Debugging. The ability to send out info about
+the AVR’s state over the serial line can be
+priceless
+2. Using LCD and VFD displays that take serial
+input
+3. Making your own GPS datalogger is fairly
+easy, because GPS modules usually send out
+their location data using a USART-style serial
+protocol.
+4. Integrating card-readers, both magnetic stripe and RFID, into your designs, because
+they often send their data to you in USART
+serial.
+5. Sending data via radio protocols, because
+most use USART encoded in various ways
+
+Feel free to explore!!
