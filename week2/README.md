@@ -56,6 +56,7 @@ For more details on the register, please refer to the datasheet in the resources
 
 
 ### Register Configuration
+---
 In this section we will show how you can configure the registers to start transmitting with your Atmel AVR microcontroller.
 
 1. First of all, to transmit over serial, you need to initialize the serial registers. First check the set your baud rate using the UBRRH and UBRRL registers.
@@ -103,5 +104,29 @@ void initUSART(void) { /* requires BAUD */
 
 
 ### Transmitting
+---
+To transmit, write to the UDR-TX (USART data register). For example, If we have a sensor that reads say luminous intensity as 24 lumens, and we need to send this to our PC, we will write the value 24 to the UDR-TX register. 
+
+For this to happen, wait until the UDR is clear, indicated by the UDRE0 in the UCSR0A being set, then write data to UDR0
+
+This looks as below:
+```c
+void transmit(uint8_t data){
+    loop_until_bit_is_set(UCSR0A, UDRE0); // wait for empty transmit buffer
+    UDR = data; // write data to UDR-TX
+}
+```
 
 ### Receiving
+---
+To receive data, read from the UDR-RX register. Say for example we need to send a command to a device through the serial terminal. For example lets say we have a module that we want to send the command GT:SEND to perform a specific function. The MCU will listen for this command on the serial port.
+
+For this to happen, when data comes in, the RXC0 bit in UCSR0A will be set, and you can read the incoming data out of UDR-RX.
+
+This looks as below:
+```c
+void receive(void){
+    loop_until_bit_is_set(UCSR0A, RXC0); // wait for incoming data
+    return UDR0; // return register value
+}
+```
