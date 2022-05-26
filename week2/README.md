@@ -130,3 +130,7 @@ void receive(void){
     return UDR0; // return register value
 }
 ```
+
+### Further making
+---
+You would create header files for the the above functions, namely ***usart.h*** and ***usart.cpp*** and use them in your main files that require USART communication
