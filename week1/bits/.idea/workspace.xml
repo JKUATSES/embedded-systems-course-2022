@@ -36,11 +36,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b82d35-637d-4415-ab31-b890d5cb8374" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bit-test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bit-twiddling/.idea/bit-twiddling.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bit-twiddling/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bit-twiddling/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bit-twiddling/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../bit-twiddling/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/.idea/organ-player.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/include/organ.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/include/organ.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/include/pins.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/include/scale16.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week2/organ-player/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week3/digital-input/include/buttons.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week3/digital-input/include/buttons.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../week3/digital-input/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +74,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="7y3ssk1p" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -87,9 +98,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../cpp" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Makefile Application.all">
     <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="bits" TARGET_NAME="all" CONFIG_NAME="all" version="1">
@@ -240,6 +251,10 @@
       <workItem from="1652970760620" duration="2146000" />
       <workItem from="1652980302432" duration="759000" />
       <workItem from="1653043554917" duration="2106000" />
+      <workItem from="1653080432049" duration="2459000" />
+      <workItem from="1653292424002" duration="132000" />
+      <workItem from="1653292635988" duration="731000" />
+      <workItem from="1653332473694" duration="22000" />
     </task>
     <servers />
   </component>

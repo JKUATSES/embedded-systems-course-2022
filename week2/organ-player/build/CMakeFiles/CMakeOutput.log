@@ -1,0 +1,56 @@
+The target system is: Generic -  - 
+The host system is: Windows - 10.0.19044 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/WinAVR-20100110/bin/avr-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week2/organ-player/build/CMakeFiles/3.22.22022201-MSVC_2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/WinAVR-20100110/bin/avr-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week2/organ-player/build/CMakeFiles/3.22.22022201-MSVC_2/CompilerIdCXX/a.out"
+
+The target system is: Generic -  - 
+The host system is: Windows - 10.0.19044 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/MinGW/bin/mingw32-gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+
+The C compiler identification is GNU, found in "C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week2/organ-player/build/CMakeFiles/3.22.22022201-MSVC_2/CompilerIdC/a.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/MinGW/bin/mingw32-g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+
+The CXX compiler identification is GNU, found in "C:/Users/USER/Desktop/Folders/Projects/ses-2022/embedded-systems-course-2022/week2/organ-player/build/CMakeFiles/3.22.22022201-MSVC_2/CompilerIdCXX/a.exe"
+
