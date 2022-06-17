@@ -21,7 +21,8 @@ The problem with the above connections is that if the button has not been presse
 
 To combat this, we use a pull-up resistor. So we always know the pin is always high.
  <br>
- The image below shows this connection.
+ The image below shows this connection. <br>
+
 ![pull-up resistor](./images/pull-up.png)
 
 <br>
@@ -109,7 +110,7 @@ if (PIND & (1<<2)){
 
 ```
 
-Please note that AVR has created useful macros for checking bits, clearing bits and more. You should include <avr/io.h> to use these macros. A snippet is shown below:
+Please note that AVR has created useful macros for checking bits, clearing bits and more. You should include ```c <avr/io.h> ``` to use these macros. A snippet is shown below:
 
 ```c
 
@@ -160,3 +161,80 @@ Notice that we enable the pull up resistor for the button pin(PD2) by writing to
 
 A high voltage on the AVR's pin results in a logical 1 inside the AVR, and the switch voltage is high when when the button is not pressed, PIND has a 1 in bit PD2 when the button is not pressed. Oppositely, when the butto is pressed, this bit will read a zero. So if you are testing for a bit, you will want to check if this bit is clear.
 
+## Changing state
+---
+You may ultimately want to know whether the button just got pressed or just got released. That is you may want to know the sate of the button This means you need to know the difference between "when the button enters the pressed state" or "while the button is pressed". To remove this confusion, we need to store the current state of the button to be chacked. We use a variable to store this state.
+
+```c
+// ------- Preamble -------- //
+#include <avr/io.h>
+#include "pinDefines.h"
+
+int main(void) {
+
+    // -------- Inits --------- //
+    uint8_t buttonWasPressed; /* state */
+    BUTTON_PORT |= (1 << BUTTON); /* enable the pullup on the button */
+    LED_DDR = (1 << LED0); /* set up LED for output */
+    // ------ Event loop ------ //
+    while (1) {
+        if (bit_is_clear(BUTTON_PIN, BUTTON)) { /* button is pressed now */
+            if (buttonWasPressed == 0) { /* but wasn't last time through */
+                LED_PORT ^= (1 << LED0); /* do whatever */
+                buttonWasPressed = 1; /* update the state */
+            }
+        }
+        else { 
+            /* button is not pressed now */
+            buttonWasPressed = 0; /* update the state */
+        }
+
+    } /* End event loop */
+    return (0); /* This line is never reached */
+}
+```
+
+## Debouncing
+---
+The easiest solution to button debouncing is to wait a few milliseconds and then check to see if the button is still pressed or not before making any decisions. Because the button bounce only for a short time, waiting a bit longer and then double checking will ensure that we are not mistaking a bounce for a true change. 
+
+### Debounce example
+```c
+    #include <avr/io.h>
+    #include "pinDefines.h"
+    #include <util/delay.h>
+    #define DEBOUNCE_TIME 1000 /* microseconds */
+
+
+    uint8_t debounce(void) {
+        if (bit_is_clear(BUTTON_PIN, BUTTON)) { /* button is pressed now */
+            _delay_us(DEBOUNCE_TIME);
+            if (bit_is_clear(BUTTON_PIN, BUTTON)) { /* still pressed */
+                return (1);
+            }
+        }
+        return (0);
+    }
+
+
+    int main(void) {
+        // -------- Inits --------- //
+        uint8_t buttonWasPressed; /* state */
+        BUTTON_PORT |= (1 << BUTTON); /* enable the pullup on the button */
+        LED_DDR = (1 << LED0); /* set up LED for output */
+        // ------ Event loop ------ //
+        while (1) {
+            if (debounce()) { /* debounced button press */
+                if (buttonWasPressed == 0) { /* but wasn't last time through */
+                LED_PORT ^= (1 << LED0); /* do whatever */
+                buttonWasPressed = 1; /* update the state */
+            }
+        }
+        else { /* button is not pressed now */
+            buttonWasPressed = 0; /* update the state */
+        }
+        } /* End event loop */
+        
+        return (0); /* This line is never reached */
+        }
+```

@@ -3,24 +3,23 @@
 This repo contains material for embedded sytems hardware and software development short courses for 2022 SES Projects meetings
 
 # Table of Contents
-1. Introduction To Embedded Systems :white_check_mark:
-2. PORT system :white_check_mark:
-3. Serial Communication :white_check_mark:
-4. Digital I/O
-5. Analog-to-Digital Conversion I
-6. Hardware Interrupts
-7. Intro to Timer/Counter Hardware
-8. Pulse width modulation
-9. Driving servo motors
-10. Analog-to-digital conversion II
-11. Advanced PWM tricks
-12. Switches
-13. Advanced Motors
-14. SPI
-15. I2C
-16. Flash Program Memory
-17. EEPROM
-18. Miscellanous Topics - Power savings, Wathdog Timers, Crystals and alternate clocks, Bootloaders, Analog comparator
+1. Introduction To Embedded Systems and the PORT system :white_check_mark:
+2. Serial Communication :white_check_mark:
+3. Digital I/O :white_check_mark:
+4. Analog-to-Digital Conversion I
+5. Hardware Interrupts
+6. Intro to Timer/Counter Hardware
+7. Pulse width modulation
+8. Driving servo motors
+9. Analog-to-digital conversion II
+10. Advanced PWM tricks
+11. Switches
+12. Advanced Motors
+13. SPI
+14. I2C
+15. Flash Program Memory
+16. EEPROM
+17. Miscellanous Topics - Power savings, Wathdog Timers, Crystals and alternate clocks, Bootloaders, Analog comparator
 
 
 ## Folders Description
