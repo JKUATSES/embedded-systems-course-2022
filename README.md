@@ -25,4 +25,10 @@ This repo contains material for embedded sytems hardware and software developmen
 ## Folders Description
 1. Resources -> contains controller pinouts, datasheets, development board pinouts, links to software downloads.
 
-2. Week 1 -> Material for week 1 meeting and exercises for the same.
+2.lesson1 -> Material for week 1 meeting and exercises for the same. (All subsequent lessons are labelled as above)
+
+3. core-library - contains useful files you may need such as USART Macros, Pin definitions etc.
+
+## Further reading
+1. http://www.ganssle.com/debouncing.htm
+2. https://hackaday.com/2010/11/09/debounce-code-one-post-to-rule-them-all/#more-29916
